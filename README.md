@@ -26,9 +26,9 @@ server {
         return 301 https://$host$request_uri;
     }
 
-	location ~ /\.git {
-		deny all;
-	}
+    location ~ /\.git {
+        deny all;
+    }
 }
 server {
     listen 443 ssl http2;
@@ -47,9 +47,9 @@ server {
         alias /var/www/dehydrated;
     }
 
-	location ~ /\.git {
-		deny all;
-	}
+    location ~ /\.git {
+        deny all;
+    }
 
     ssl_certificate /etc/dehydrated/certs/ffrn.de/fullchain.pem;
     ssl_certificate_key /etc/dehydrated/certs/ffrn.de/privkey.pem;
@@ -65,13 +65,12 @@ server {
         alias /var/www/dehydrated;
     }
 
-    location ^~ /.well-known/matrix {
-        alias /var/www/matrix/.well-known/matrix;
-        default_type application/json;
-    }
-
     location / {
         return 302 https://www.freifunk-rhein-neckar.de$request_uri;
+    }
+
+    location ~ /\.git {
+        deny all;
     }
 
     ssl_certificate /etc/dehydrated/certs/ffrn.de/fullchain.pem;
