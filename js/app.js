@@ -76,12 +76,18 @@ $(document).on("usersupdated", function () {
 
 // +---------------------------------------------------------------------------
 // + Current Stats
-// + - Use our proxy.php to get the Current number of Users online
+// + Uses NGINX to proxy meshviewer.json to avoid the CORS problem.
+// +
+// + location = /meshviewer.json {
+// +       proxy_pass https://map.ffrn.de/data/meshviewer.json;
+// +    proxy_cache off;
+// + }
+// +
 // + @fires: event on document: "usersupdated" Whenever the function completes
 // + a successfull Ajax request.
 // +---------------------------------------------------------------------------
 app.getCurrentStats = function () {
-  $.get("proxy.php", function (json) {
+  $.get("meshviewer.json", function (json) {
     // json should already be an object. If not, try to parse. 
     if (typeof json === "string") json = JSON.parse(json);
     if (!json || typeof json.nodes === "undefined"){
