@@ -1,2 +1,2 @@
-Contact: security@ffrn.de
+Contact: mailto:security@ffrn.de
 Preferred-Languages: en, de
