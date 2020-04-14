@@ -1,4 +1,4 @@
-# Webseite des Freifunk Rhein Neckars
+# Webseite des Freifunk Rhein-Neckars
 
 Dieses Repository enthält die Webseite welche unter https://www.freifunk-rhein-neckar.de/ zur Verfügung steht.
 
