@@ -1,0 +1,32 @@
+{{ if .IsHome -}}<div class="blur navbar navbar-default navbar-fixed-top"></div>{{ end }}
+<nav id="navigation" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
+            </button>
+            <b><a class="navbar-brand" href="/"><img src="/images/ffrn_logo.svg" alt="logo"></a></b>
+        </div>
+        <div class="collapse navbar-collapse pull" id="main-navbar">
+            <ul class="nav navbar-nav">
+                {{ $currentPage := . }}
+                {{- range .Site.Menus.main }}
+                    {{- $active := "" }}
+                    {{- $menu_item_url := .URL | relLangURL }}
+                    {{- $page_url:= $currentPage.RelPermalink | relLangURL }}
+                    {{- if eq $menu_item_url $page_url -}}
+                        {{- $active = "active" }}
+                    {{- end -}}
+                    <li class="{{ $active }}">
+                    <a href="{{ .URL | relLangURL }}" {{ if strings.HasPrefix ( .URL | relLangURL ) "http" -}} target="_blank" {{ end -}} 
+                        class="block mt-4 md:inline-block md:mt-0 hover:text-eureka mr-4 main-a">
+                        {{ .Name }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+    <div class="header-line"></div>
+</nav>

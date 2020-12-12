@@ -1,0 +1,34 @@
+{{ define "main" }}
+    <div class="mapbox">
+        <div id="map"></div>
+
+        <div class="overlay">
+            <div class="container main">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>Werde Teil der Community.<br>Werde Freifunker!</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="statusbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 center-block">
+                    <p>
+                        <span class="glyphicon glyphicon-user"></span> <span id="users-online">0</span> Benutzer verbunden.
+                        <img height="16px" src="images/ffrn_logo_green.svg" data-toggle="tooltip" data-placement="top"
+                            title="Knoten online:"/> <span id="nodes-online">0</span> Knoten online.
+                        <img height="16px" src="images/ffrn_logo_red.svg" data-toggle="tooltip" data-placement="top"
+                            title="Knoten offline:"/> <span id="nodes-offline">0</span> Knoten offline.
+                        <img height="16px" src="images/ffrn_logo.svg" data-toggle="tooltip" data-placement="top"
+                            title="Knoten gesamt:"/> <span id="nodes-total">0</span> Knoten registriert.
+                        <span class="glyphicon glyphicon-map-marker"> </span> <span id="nodes-with-geolocation">0</span>
+                        Knoten mit Geo-Koordinaten.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{{ end }}

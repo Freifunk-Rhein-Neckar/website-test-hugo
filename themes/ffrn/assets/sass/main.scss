@@ -1,0 +1,397 @@
+* {
+  border-radius: 0 !important;
+}
+
+.mapbox {
+  position: relative;
+}
+
+.mapbox .overlay {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.mapbox .overlay .btn {
+  pointer-events: initial;
+}
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #ff4a59;
+}
+
+a:hover {
+  color: #ff4a59;
+
+}
+h1 {
+  font-size: 26px;
+}
+/* #map { height: 500px; } */
+#map{
+  height: calc(100vh - 40px);
+}
+nav ul li a:hover {
+  background: #abc;
+}
+
+.navbar-nav .active a {
+  color: #222;
+}
+
+
+.container.main {
+  min-height: calc(100% - 50px);
+  height: auto;
+  margin-top: 50px;
+  position: relative;
+}
+#statusbar {
+  min-height: 40px;
+  padding-top: 12px;
+  background: #818181;
+  color: #ffffff;
+  text-align: center;
+}
+@media (min-width: 992px){
+.container.main {
+  min-height: calc(100% - 100px);
+  margin-top: 100px;
+
+}
+  h1 {
+      font-size: 36px;
+  }
+}
+
+#index .main .row {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 100%;
+  padding: 0;
+}
+
+.main h1 {
+  background: #ff4a59;
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+#index h1 {
+  color: #fff;
+  display: inline;
+  background: #ff4a59;
+}
+
+.panel-default>.panel-heading {
+  background: none;
+}
+
+.panel-title>a:hover {
+  color: #ff4a59;
+  text-decoration: none;
+}
+
+.leaflet-top {
+  top:50%;
+
+}
+
+.mailform {
+  padding-left: 0;
+}
+
+footer {
+  margin-top: 20px;
+  background: #262626;
+  color: #818181;
+}
+
+footer.nomargintop {
+  margin-top: 0px;
+}
+
+footer h4 {
+  color: #fff;
+}
+
+footer .container {
+  padding-top: 15px;
+}
+
+footer .footer-links ul {
+  padding: 0;
+}
+
+footer .footer-links li {
+  list-style: none;
+  padding-bottom: 3px;
+}
+
+footer .footer-links a {
+  color: #818181;
+}
+
+footer .footer-links a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footer-social a {
+  color: #fff;
+}
+
+footer .footer-social i {
+  color: #818181;
+}
+
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+
+.bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+.bs-callout code {
+  border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+  margin-top: -5px;
+}
+.bs-callout-default {
+  border-left-color: #777;
+}
+.bs-callout-default h4 {
+  color: #777;
+}
+.bs-callout-primary {
+  border-left-color: #428bca;
+}
+.bs-callout-primary h4 {
+  color: #428bca;
+}
+.bs-callout-success {
+  border-left-color: #5cb85c;
+}
+.bs-callout-success h4 {
+  color: #5cb85c;
+}
+.bs-callout-danger {
+  border-left-color: #d9534f;
+}
+.bs-callout-danger h4 {
+  color: #d9534f;
+}
+.bs-callout-warning {
+  border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+  color: #f0ad4e;
+}
+.bs-callout-info {
+  border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+  color: #5bc0de;
+}
+
+.bs-callout-ffrn {
+  border-left-color: #ff4a59;
+}
+
+/* Seite mitmachen.html */
+.iban{
+padding: 0 2px;
+}
+
+dl.bank dd {
+display: inline;
+margin: 0;
+}
+dl.bank dd:after{
+display: block;
+content: '';
+}
+dl.bank dt{
+display: inline-block;
+min-width: 100px;
+}
+
+/* Bootsrap überschreiben */
+
+.navbar-brand {
+  height: auto;
+  padding: 5px;
+}
+
+.navbar-nav>li>a {
+  text-transform: uppercase;
+  color: #5e5e5e;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar-default .navbar-toggle {
+  border: none;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background: #ff4a59;
+}
+
+.panel-group .panel {
+  border-radius: 0;
+}
+
+.panel-body a {
+  color: #ff4a59;
+}
+
+@media (min-width: 992px){
+  h1 {
+      font-size: 36px;
+  }
+.navbar-brand img {
+  height: 90px;
+}
+
+#index .navbar-default {
+  background: none;
+  border: none;
+}
+
+.navbar-nav>li>a {
+  line-height: 100px;
+  padding: 0 15px;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+  color: #222;
+  background: none;
+}
+.pull {
+  float: right;
+}
+.blur {
+  height: 100px;
+  -webkit-filter: blur(40px);
+  -moz-filter: blur(40px);
+  -ms-filter: blur(40px);
+  -o-filter: blur(40px);
+  filter: blur(40px);
+  background: rgba(250,250,250,0.9)!important;
+}
+
+}
+
+
+/* headroom.js foo */
+
+.headroom {
+  transition: transform 200ms linear;
+  -webkit-transition:  -webkit-transform 200ms linear;
+  -moz-transition: -moz-transform 200ms linear;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+}
+
+/* Blog Styles */
+.aligncenter {
+  margin: 15px auto;
+  display: block;
+}
+
+.alignleft {
+  margin: 15px 0;
+}
+
+.blog h4 {
+  margin: 5px;
+}
+
+.blog h4 a {
+  color: #333;
+}
+
+.blog h4 a:hover {
+  color: #ff4a59;
+}
+
+.blog .meta {
+  color: #999;
+}
+
+.blog .meta .date,
+.blog .meta .author {
+  color: #ff6e7a;
+}
+
+div.navigation {
+  clear: both;
+}
+
+.newer {
+  float: left;
+  width: 50%;
+}
+
+.older {
+float: right;
+width: 50%;
+text-align: right;
+}
+
+.blog img {
+  width: 100%;
+  height: auto;
+}
+
+.btn-primary {
+  background-color: #ff4a59;
+  border-color: #ff4a59;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: #ff1e36;
+  border-color: #ff1e36;
+}
+
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
+  background-color: #ff6e7a;
+  border-color: #ff6e7a;
+}

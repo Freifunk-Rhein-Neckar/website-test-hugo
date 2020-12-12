@@ -1,0 +1,66 @@
+baseURL = "https://www.freifunk-rhein-neckar.de/"
+languageCode = "de-de"
+title = "Freifunk Rhein-Neckar"
+theme = "ffrn"
+
+DefaultContentLanguage = "de"
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[privacy]
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true
+  [privacy.vimeo]
+    disable = false
+    enableDNT = true
+    simple = false
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Die Idee"
+  url = "/die_idee/"
+  weight = 2
+
+[[menu.main]]
+  name = "Mitmachen"
+  url = "/mitmachen/"
+  weight = 3
+
+[[menu.main]]
+  name = "News"
+  url = "https://blog.ffrn.de/"
+  # url = "/news/"
+  weight = 4
+
+[[menu.main]]
+  name = "FAQ"
+  url = "https://forum.ffrn.de/c/FAQ"
+  weight = 5
+
+[[menu.main]]
+  name = "Wiki"
+  url = "https://wiki.ffrn.de/"
+  weight = 6
+
+[[menu.main]]
+  name = "Forum"
+  hrefTargetBlank = true
+  url = "https://forum.ffrn.de/"
+  weight = 7
+
+[[menu.main]]
+  name = "Karte"
+  url = "https://map.ffrn.de/"
+  # url = "/karte/"
+  weight = 8
+
+[[menu.main]]
+  name = "Kontakt"
+  url = "/kontakt/"
+  weight = 9

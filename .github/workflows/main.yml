@@ -1,0 +1,58 @@
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ hugo, master ]
+  pull_request:
+    branches: [ hugo, master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # runs-on: ubuntu-18.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+         submodules: true  # Fetch Hugo themes (true OR recursive)
+         fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.75.1'
+          extended: true
+
+      - name: Hugo Version
+        run: hugo version
+
+      - uses: actions/cache@v2
+        with:
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: Build
+        run: hugo
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: public
+          path: public
+
+    outputs:
+      triggered: ${{ steps.check.outputs.triggered }}
+
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: deploy-check
+  #   if: needs.deploy-check.outputs.triggered == 'true'
